@@ -17,10 +17,10 @@ RAYLIB_PATH = C:/raylib/raylib
 PROJECT_NAME = my_cool_raylib_game
 COMPILER = gcc
 
-#multiple include paths (-I. -I[path] -I[path)
-INCLUDE_PATHS = -I. -I$(RAYLIB_PATH)/src -I$(RAYLIB_PATH)/src/external
-#library paths (multiple... "-L. -L"" -L"")
-LDFLAGS = -L. -L$(RAYLIB_PATH)/src -L$(RAYLIB_PATH)/src/external
+#define raylib include path
+INCLUDE_PATHS = -I $(RAYLIB_PATH)/src
+#include raylib libraries
+LDFLAGS = -L $(RAYLIB_PATH)/src
 #library inclusion (lwinmm required for timer res)
 LDLIBS = -lraylib -lopengl32 -lgdi32 -lwinmm
 #define default make program (on windows this is usually mingw32-make)
@@ -34,8 +34,8 @@ MAKE = mingw32-make
 #  -Wno-missing-braces  ignore invalid warning (GCC bug 53119)
 
 CFLAGS += -O1 -Wall -std=c99 -Wno-missing-braces
-#add raylib data / -Wl, --subsystem, windows hides the console window
-CFLAGS += $(RAYLIB_PATH)/src/raylib.rc.data -Wl,--subsystem,windows
+# -Wl, --subsystem, windows hides the console window
+CFLAGS += -Wl,--subsystem,windows
 #source files - you will need to add more as your project expands
 OBJS = main.c
 #You can comment the line above and use this:
