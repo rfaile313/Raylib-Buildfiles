@@ -36,7 +36,7 @@ MAKE = mingw32-make
 CFLAGS += -O1 -Wall -std=c99 -Wno-missing-braces
 #add raylib data / -Wl, --subsystem, windows hides the console window
 CFLAGS += $(RAYLIB_PATH)/src/raylib.rc.data -Wl,--subsystem,windows
-#source files - you will need to add more ad your project expands
+#source files - you will need to add more as your project expands
 OBJS = main.c
 #You can comment the line above and use this:
 #OBJS = $( wildcard *.c **/*.c )
