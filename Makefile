@@ -38,6 +38,8 @@ CFLAGS += -O1 -Wall -std=c99 -Wno-missing-braces
 CFLAGS += $(RAYLIB_PATH)/src/raylib.rc.data -Wl,--subsystem,windows
 #source files - you will need to add more ad your project expands
 OBJS = main.c
+#You can comment the line above and use this:
+#OBJS = $( wildcard *.c **/*.c )
 
 all:
 	$(COMPILER) $(OBJS) -o $(PROJECT_NAME) $(CFLAGS) $(INCLUDE_PATHS) $(LDFLAGS) $(LDLIBS)
