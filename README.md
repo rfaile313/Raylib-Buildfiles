@@ -21,7 +21,7 @@ This Makefile was built with the purpose of being easily readable and quickly ch
 9. Type `mingw32-make`
 10. This will compile the program and create an executable with the same name as your PROJECT_NAME
 
-**Note: By default, the Makefile only looks for a "main.c" file. As your project expands and you add files or directories change, you MUST update the OBJS file accordingly. It is highly recommended to incorporate a wildcard type function to achieve this. 
+**Note: By default, the Makefile only looks for a "main.c" file. As your project expands and you add files or directories change, you MUST update the OBJS variable accordingly. It is highly recommended to incorporate a wildcard type function to achieve this. 
 
 Any questions? Feel free to [contact me](https://rudyfaile.com/contact/)
 
