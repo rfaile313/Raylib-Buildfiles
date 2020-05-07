@@ -1,6 +1,7 @@
-#Author: Rudy Faile (@rfaile313)
-#Description: A simple Makefile that incorporates
-#+Raylib on OS: Windows && Platform: Desktop
+# Author: Rudy Faile (@rfaile313)
+# Description: A simple Makefile that incorporates
+# Raylib on OS: Windows && Platform: Desktop
+# License: MIT
 
 #What you need to do:
 #1. Git clone Raylib https://github.com/raysan5/raylib.git
