@@ -1,10 +1,10 @@
 # Raylib-Buildfiles
 
-## run.bat
+## [run.bat](https://github.com/rfaile313/Raylib-Buildfiles/blob/master/run.bat)
 
 This is as easy as it gets. Set the name of the executable, target the source file and your raylib src. done. 
 
-## Simple-Raylib-Makefile
+## [Simple-Raylib-Makefile](https://github.com/rfaile313/Raylib-Buildfiles/blob/master/Makefile)
 
 ### A simple Makefile that incorporates Raylib on OS: Windows &amp;&amp; Platform: Desktop
 
