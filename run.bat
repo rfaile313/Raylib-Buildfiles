@@ -36,15 +36,18 @@ GOTO:EOF
 :BUILD
 IF NOT EXIST Build MKDIR Build
 PUSHD Build
-%COMPILER% %SOURCE% -o %EXECUTABLE% %CFLAGS% %WINFLAGS% %INCLUDEPATHS% %LIBPATHS% %LIBFLAGS% && echo **Build Successful** && echo.
+%COMPILER% %SOURCE% -o %EXECUTABLE% %CFLAGS% %WINFLAGS% %INCLUDEPATHS% %LIBPATHS% %LIBFLAGS% && echo. && echo **Build Successful** && echo.
 POPD
 GOTO:EOF 
 
 :DEBUG
-echo HAHA who needs a debugger (jk need to set up tinycc)
+IF EXIST Build PUSHD Build
+tcc %SOURCE% %CFLAGS% %WINFLAGS% %INCLUDEPATHS% %LIBPATHS% %LIBFLAGS% -o %EXECUTABLE% -vv && echo. && echo **Build Successful** && echo.
+POPD
 GOTO:EOF 
 
 :CLEAN
 IF NOT EXIST Build echo. && echo **No build directory at the moment**
 IF EXIST Build RMDIR /Q/S Build && echo **Cleaned Build folder + files** 
 GOTO:EOF 
+
