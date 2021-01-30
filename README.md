@@ -9,6 +9,18 @@
 3. `make` to build your program.
 4. `make clean` to clean the executable and any objects if they exist. 
 
+Example project structure:
+
+```
+|───(Project Root)
+  |─── main.c
+  ├───include
+    └───raylib.h
+  ├───lib
+    └───libraylib.a
+```
+ 
+
 Any questions? Feel free to [contact me](https://rudyfaile.com/contact/)
 
 All credit to [@raysan5](https://twitter.com/raysan5) for his awesome C game library. Check out https://www.raylib.com/ !
